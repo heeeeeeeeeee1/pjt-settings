@@ -131,7 +131,9 @@ export default [
     // import 문 해석을 위한 설정을 지정합니다.
     settings: {
       'import/resolver': {
-        typescript: {},
+        typescript: {
+          project: './tsconfig.json', // shadcn 설치하면서 eslint 에러발생해서 추가.
+        },
       },
     },
   },
