@@ -1,14 +1,13 @@
-import './App.css'
-import Home from './pages/home'
+import './App.css';
+import Home from './pages/Home';
 
-function App() {
-
+const App = () => {
   return (
     <>
-      <h1 className='text-red-500 text-2xl'>Vite + React</h1>
-      <Home/>
+      <h1 className='text-2xl text-red-500'>Vite + React</h1>
+      <Home />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
