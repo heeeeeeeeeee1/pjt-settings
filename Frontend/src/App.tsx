@@ -1,7 +1,9 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-
 // ReactQueryDevtools : 쿼리 상태를 시각적으로 확인할 수 있는 개발자 도구
+import { RouterProvider } from 'react-router-dom';
+
+import { router } from '@/router';
 
 import './App.css';
 
@@ -12,6 +14,7 @@ const queryClient = new QueryClient();
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
       <ReactQueryDevtools />
     </QueryClientProvider>
   );

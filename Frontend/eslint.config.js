@@ -1,4 +1,3 @@
-// eslint.config.js
 // ESLint의 기본 JavaScript 규칙을 가져옵니다.
 import js from '@eslint/js';
 // TypeScript 지원을 위한 ESLint 플러그인 및 파서를 가져옵니다.
@@ -83,6 +82,19 @@ export default [
           format: ['camelCase', 'PascalCase'],
           leadingUnderscore: 'allow',
           trailingUnderscore: 'allow',
+        },
+        {
+          // 속성명에 대해 '@' 기호 허용
+          selector: 'property',
+          format: ['camelCase', 'PascalCase'],
+          leadingUnderscore: 'allow',
+          trailingUnderscore: 'allow',
+          // 특수 기호 '@'를 허용하는 정규식 패턴
+          filter: {
+            // '@'로 시작하는 속성명을 허용
+            regex: '^@',
+            match: true,
+          },
         },
         {
           // 클래스, 인터페이스, 타입 등은 PascalCase를 사용하도록 강제합니다.
