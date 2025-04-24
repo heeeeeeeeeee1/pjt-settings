@@ -97,6 +97,11 @@ export default [
           },
         },
         {
+          selector: 'property',
+          modifiers: ['requiresQuotes'], // 따옴표 속성명 허용
+          format: null, // 포맷 검사하지 않음
+        },
+        {
           // 클래스, 인터페이스, 타입 등은 PascalCase를 사용하도록 강제합니다.
           selector: 'typeLike',
           format: ['PascalCase'],
