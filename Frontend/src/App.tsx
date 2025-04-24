@@ -1,13 +1,11 @@
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
 import './App.css';
-import Home from './pages/Home';
+
+const queryClient = new QueryClient();
 
 const App = () => {
-  return (
-    <>
-      <h1 className='text-2xl text-red-500'>Vite + React</h1>
-      <Home />
-    </>
-  );
+  return <QueryClientProvider client={queryClient}></QueryClientProvider>;
 };
 
 export default App;

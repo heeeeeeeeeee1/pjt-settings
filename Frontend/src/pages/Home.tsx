@@ -1,4 +1,8 @@
 const Home = () => {
-  return <div className='text-green-500'>홈이야</div>;
+  return (
+    <div>
+      <h1 className='text-2xl text-blue-500'>Haru's peak</h1>
+    </div>
+  );
 };
 export default Home;
