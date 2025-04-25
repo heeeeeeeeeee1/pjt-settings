@@ -26,7 +26,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    /* PWA 가상 모듈 타입 정의 추가 */
+    "types": ["vite-plugin-pwa/client"]
   },
   "include": ["src"]
 }

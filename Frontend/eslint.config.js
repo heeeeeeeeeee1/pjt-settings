@@ -58,7 +58,12 @@ export default [
     // ESLint 규칙을 설정합니다.
     rules: {
       // 누락된 import 문을 오류로 처리합니다.
-      'import/no-unresolved': 'error',
+      'import/no-unresolved': [
+        'error',
+        {
+          ignore: ['^virtual:'], // 가상 모듈은 무시
+        },
+      ],
 
       // 폴더 이름은 camelCase를 사용하도록 강제합니다.
       'check-file/folder-naming-convention': ['error', { '**/': 'CAMEL_CASE' }],
